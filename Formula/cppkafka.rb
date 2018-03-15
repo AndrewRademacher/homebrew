@@ -13,11 +13,6 @@ class Cppkafka < Formula
     depends_on "librdkafka"
 
     def install
-        # system "mkdir", "build"
-        # system "cd", "build"
-        # system "cmake", "-DCMAKE_BUILD_TYPE=Release", ".."
-        # system "make"
-        # system "make", "install", "DESTDIR=#{prefix}"
         system "cmake", ".", *std_cmake_args
         system "make", "install"
     end
