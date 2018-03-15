@@ -5,9 +5,11 @@ class Cppkafka < Formula
     sha256 "4bba8f98d1996b4f87c2036afd8a973ed06881c155b0061a827935b563a0a469"
     head "https://github.com/mfontanini/cppkafka.git"
 
-    # bottle do
-    #     cellar :any
-    # end
+    bottle do
+        root_url "https://wheelmaker-bottle.nyc3.digitaloceanspaces.com"
+        cellar :any
+        sha256 "ad9b4a02b44bbd4f46366d3e6b80b73c35c0580ffea5bc5ed6431220fe030095" => :high_sierra
+    end
 
     depends_on "cmake" => :build
     depends_on "boost" => :build
