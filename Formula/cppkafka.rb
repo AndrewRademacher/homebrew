@@ -10,6 +10,7 @@ class Cppkafka < Formula
     # end
 
     depends_on "cmake" => :build
+    depends_on "boost" => :build
     depends_on "librdkafka"
 
     def install
