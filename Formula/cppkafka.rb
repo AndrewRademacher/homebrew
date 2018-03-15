@@ -9,6 +9,7 @@ class Cppkafka < Formula
     #     cellar :any
     # end
 
+    depends_on "cmake" => :build
     depends_on "librdkafka"
 
     def install
