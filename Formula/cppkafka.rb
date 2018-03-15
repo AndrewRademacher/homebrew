@@ -17,8 +17,10 @@ class Cppkafka < Formula
         # system "cmake", ".", *std_cmake_args
         # CMAKE_LIBRARY_PATH=/usr/local/lib CMAKE_INCLUDE_PATH=/usr/local/include cmake ..
 
-        system "export", "\"CMAKE_LIBRARY_PATH=/usr/local/lib\""
-        system "export", "\"CMAKE_INCLUDE_PATH=/usr/local/include\""
+        # system "export", "\"CMAKE_LIBRARY_PATH=/usr/local/lib\""
+        # system "export", "\"CMAKE_INCLUDE_PATH=/usr/local/include\""
+        ENV["CMAKE_LIBRARY_PATH"] = "/usr/local/lib"
+        ENV["CMAKE_INCLUDE_PATH"] = "/usr/local/include"
         system "cmake", ".", *std_cmake_args
         system "make", "install"
     end
