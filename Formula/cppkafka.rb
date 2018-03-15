@@ -1,8 +1,8 @@
 class Cppkafka < Formula
     desc "Modern C++ Apache Kafka client library (wrapper for librdkafka)"
     homepage "https://github.com/mfontanini/cppkafka"
-    url "https://github.com/mfontanini/cppkafka/archive/v0.1.tar.gz"
-    sha256 "710e442bba8d30bb9501a98e1d4ddc2c7f78c7c3b8bfb9815c793853ab90cbe8"
+    url "https://github.com/AndrewRademacher/cppkafka/archive/v0.2.tar.gz"
+    sha256 "4bba8f98d1996b4f87c2036afd8a973ed06881c155b0061a827935b563a0a469"
     head "https://github.com/mfontanini/cppkafka.git"
 
     # bottle do
@@ -14,11 +14,6 @@ class Cppkafka < Formula
     depends_on "librdkafka"
 
     def install
-        # system "cmake", ".", *std_cmake_args
-        # CMAKE_LIBRARY_PATH=/usr/local/lib CMAKE_INCLUDE_PATH=/usr/local/include cmake ..
-
-        # system "export", "\"CMAKE_LIBRARY_PATH=/usr/local/lib\""
-        # system "export", "\"CMAKE_INCLUDE_PATH=/usr/local/include\""
         ENV["CMAKE_LIBRARY_PATH"] = "/usr/local/lib"
         ENV["CMAKE_INCLUDE_PATH"] = "/usr/local/include"
         system "cmake", ".", *std_cmake_args
